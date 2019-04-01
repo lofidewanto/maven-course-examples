@@ -11,7 +11,7 @@
 	<artifactId>ejb3.application</artifactId>
 	<packaging>ear</packaging>
 	<name>Java EE 6 Enterprise Application Archive</name>
-  <url>http://127.0.0.1:8080/webclient/</url>
+  	<url>http://127.0.0.1:8080/webclient/</url>
 
 	<build>
 		<finalName>ejb3.application</finalName>
