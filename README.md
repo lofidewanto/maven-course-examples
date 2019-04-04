@@ -12,4 +12,4 @@ are licensed under the
 
 Continuous Integration
 ======================
-[![Travis Build Status](https://travis-ci.org/idueppe/maven-course-examples.png?branch=master)](https://travis-ci.org/idueppe/maven-course-examples)
+[![Travis Build Status](https://travis-ci.org/lofidewanto/maven-course-examples.svg?branch=master)](https://travis-ci.org/lofidewanto/maven-course-examples)
