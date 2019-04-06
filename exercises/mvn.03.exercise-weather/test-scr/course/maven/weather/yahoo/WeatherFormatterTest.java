@@ -8,7 +8,6 @@ import com.sonatype.maven.weather.yahoo.Weather;
 import com.sonatype.maven.weather.yahoo.WeatherFormatter;
 import com.sonatype.maven.weather.yahoo.YahooParser;
 
-
 import junit.framework.TestCase;
 
 public class WeatherFormatterTest extends TestCase {
