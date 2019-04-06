@@ -8,13 +8,13 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		// Configure Log4J
-		PropertyConfigurator.configure(Main.class.getClassLoader().getResource(	"log4j.properties"));
+		PropertyConfigurator.configure(Main.class.getClassLoader().getResource("log4j.properties"));
 
 		// Read the Zip Code from the Command-line (if none supplied, use 60202)
 		String zipcode = "02101";
 		try {
 			zipcode = args[0];
-		} catch (Exception e) {    
+		} catch (Exception e) {
 			System.out.println("no zip code provided - so lookup weather for 02101");
 		}
 

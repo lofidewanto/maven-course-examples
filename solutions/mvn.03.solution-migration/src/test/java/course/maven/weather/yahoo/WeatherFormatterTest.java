@@ -2,13 +2,13 @@ package course.maven.weather.yahoo;
 
 import java.io.InputStream;
 
-import junit.framework.TestCase;
-
 import org.apache.commons.io.IOUtils;
 
 import com.sonatype.maven.weather.yahoo.Weather;
 import com.sonatype.maven.weather.yahoo.WeatherFormatter;
 import com.sonatype.maven.weather.yahoo.YahooParser;
+
+import junit.framework.TestCase;
 
 public class WeatherFormatterTest extends TestCase {
 
