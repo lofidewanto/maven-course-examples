@@ -1,4 +1,4 @@
-maven-course-examples
+Maven Course Examples (maven-course-examples)
 ======================
 Examples, Exercises and Solutions for training seminar about [Apache Maven] (http://maven.apache.org/).
 All projects are intended to be used for training purposes only.
