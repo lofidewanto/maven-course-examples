@@ -30,7 +30,7 @@
 					</execution>
 				</executions>   
 				<configuration>
-					<outputDirectory>${project.build.directory}/lower</outputDirectory>
+					<outputDirectory>${project.build.directory}/upper</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
