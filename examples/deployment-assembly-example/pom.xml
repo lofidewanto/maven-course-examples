@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.course</groupId>
 	<artifactId>deployment-assembly-example</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>deployment-assembly-example</name>
-	
+
 	<properties>
-    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    	<tomcat.version>8.0.23</tomcat.version>
-    	<maven.compiler.source>1.8</maven.compiler.source>
-    	<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tomcat.version>8.0.23</tomcat.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -25,11 +26,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.35</version>
 		</dependency>
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>9.4-1201-jdbc41</version>
-    </dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4-1201-jdbc41</version>
+		</dependency>
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-guvnor</artifactId>
@@ -43,10 +44,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.tomcat</groupId>
-    		<artifactId>tomcat</artifactId>
-    		<version>${tomcat.version}</version>
-    		<type>zip</type>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat</artifactId>
+			<version>${tomcat.version}</version>
+			<type>zip</type>
 		</dependency>
 	</dependencies>
 	<build>
