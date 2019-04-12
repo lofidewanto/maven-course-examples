@@ -47,21 +47,21 @@
 		<profile>
 			<id>test</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-				<!-- <bin>test</bin> -->
-				<!-- <test>active</test> -->
+				<bin>test</bin>
+				<test>active</test>
 			</properties>
 			<build>
 				<finalName>${project.artifactId}-${bin}-${test}</finalName>
 			</build>
 		</profile>
 		<profile>
-			<id>windowsTest</id>
+			<id>windows</id>
 			<activation>
 				<os>
-					<family>Windows</family>
+					<family>windows</family>
 				</os>
 			</activation>
 			<build>
