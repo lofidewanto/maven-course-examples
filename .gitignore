@@ -8,6 +8,9 @@
 .springBeans
 .factorypath
 
+# VSCode
+.vscode
+
 # IntelliJIDEA files #
 .idea
 *.iml
