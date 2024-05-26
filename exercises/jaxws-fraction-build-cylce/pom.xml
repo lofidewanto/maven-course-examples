@@ -1,25 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.course.exercises</groupId>
 	<artifactId>jaxws-fraction-build-cylce</artifactId>
-  <version>1.0.0-SNAPSHOT</version>              
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>ejb</packaging>
 	<name>JAX-WS - Fraction Web Service exercise</name>
-  <description>This is a exercise project for working with JAX-WS</description>
+	<description>This is a exercise project for working with JAX-WS</description>
 	<dependencies>
-   		<dependency>
-     		<groupId>org.glassfish.extras</groupId>
-     		<artifactId>glassfish-embedded-all</artifactId>
-     		<version>3.1.1-b11</version>
-		    <scope>test</scope>
-   		</dependency>
-		  <dependency>
-     		<groupId>javax</groupId>
-     		<artifactId>javaee-api</artifactId>
-     		<version>6.0</version>
-     		<scope>provided</scope>
-   		</dependency>
+		<dependency>
+			<groupId>org.glassfish.extras</groupId>
+			<artifactId>glassfish-embedded-all</artifactId>
+			<version>3.1.1-b11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -44,8 +45,10 @@
 					<keep>true</keep>
 					<genWsdl>true</genWsdl>
 					<verbose>true</verbose>
-					<resourceDestDir>${project.build.directory}/resources-generated</resourceDestDir>
-					<wsdlDirectory>${project.build.directory}/resources-generated</wsdlDirectory>
+					<resourceDestDir>
+						${project.build.directory}/resources-generated</resourceDestDir>
+					<wsdlDirectory>
+						${project.build.directory}/resources-generated</wsdlDirectory>
 					<sourceDestDir>${project.build.directory}/sources-generated</sourceDestDir>
 					<wsdlLocation>http://localhost:9000/services?wsdl</wsdlLocation>
 				</configuration>
@@ -64,12 +67,12 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-ejb-plugin</artifactId>           
+				<artifactId>maven-ejb-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
 					<ejbVersion>3.1</ejbVersion>
 				</configuration>
-			</plugin>			
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -94,8 +97,8 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>			
-			
+			</plugin>
+
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -153,10 +156,10 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 </project>

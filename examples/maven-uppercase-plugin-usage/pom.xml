@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.course</groupId>
@@ -23,12 +24,12 @@
 				<artifactId>maven-uppercase-plugin</artifactId>
 				<version>1.0-SNAPSHOT</version>
 				<executions>
-					<execution>  
+					<execution>
 						<goals>
 							<goal>uppercase</goal>
 						</goals>
 					</execution>
-				</executions>   
+				</executions>
 				<configuration>
 					<outputDirectory>${project.build.directory}/upper</outputDirectory>
 				</configuration>
@@ -45,10 +46,10 @@
 				<filtering>true</filtering>
 				<includes>
 					<include>**/*.xml</include>
-<!-- 					<include>**/*.properties</include> -->
+					<!-- 					<include>**/*.properties</include> -->
 				</includes>
-			</resource>    
-			
+			</resource>
+
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>false</filtering>
@@ -56,7 +57,7 @@
 					<exclude>**/*.xml</exclude>
 				</excludes>
 			</resource>
-			
+
 		</resources>
 
 		<pluginManagement>

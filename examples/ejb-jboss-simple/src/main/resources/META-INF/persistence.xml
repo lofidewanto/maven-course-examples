@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
-  version="2.0">
-  <persistence-unit name="pu">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="pu">
 		<!--
 			Uncomment one of the following to enable a non-default JPA provider
 		-->
@@ -29,10 +29,12 @@
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.transaction.flush_before_completion"
 				value="true" />
-			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider" />
+			<property name="hibernate.cache.provider_class"
+				value="org.hibernate.cache.HashtableCacheProvider" />
 
 			<!-- Properties for EclipseLink (default provider for GlassFish) -->
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation"
+				value="drop-and-create-tables" />
 			<property name="eclipselink.logging.level" value="FINE" />
 		</properties>
 	</persistence-unit>

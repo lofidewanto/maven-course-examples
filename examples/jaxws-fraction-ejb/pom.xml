@@ -1,27 +1,28 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.course</groupId>
 	<artifactId>jaxws-fraction-ejb</artifactId>
-  <version>1.0-SNAPSHOT</version>              
+	<version>1.0-SNAPSHOT</version>
 	<packaging>ejb</packaging>
 	<name>Web Service 07 JAX-WS - Fraction EJB</name>
 
 	<dependencies>
 		<dependency>
-     		<groupId>javax</groupId>
-     		<artifactId>javaee-api</artifactId>
-     		<version>6.0</version>
-     		<scope>provided</scope>
-   		</dependency>
-   		<dependency>
-     		<groupId>org.glassfish.extras</groupId>
-     		<artifactId>glassfish-embedded-all</artifactId>
-     		<version>3.1.1-b11</version>
-		    <scope>test</scope>
-   		</dependency>
-   		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.extras</groupId>
+			<artifactId>glassfish-embedded-all</artifactId>
+			<version>3.1.1-b11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.8.2</version>
@@ -37,7 +38,7 @@
 				<artifactId>jaxws-maven-plugin</artifactId>
 				<version>2.3.1-b20150201.1248</version>
 				<executions>
-					<execution>         
+					<execution>
 						<id>gen</id>
 						<phase>process-classes</phase>
 						<goals>
@@ -45,12 +46,12 @@
 							<goal>wsimport</goal>
 						</goals>
 					</execution>
-<!-- 					<execution>      -->
-<!-- 						<id>import</id> -->
-<!-- 						<phase>generate-sources</phase> -->
-<!-- 						<goals> -->
-<!-- 						</goals> -->
-<!-- 				   	</execution> -->
+					<!-- 					<execution>      -->
+					<!-- 						<id>import</id> -->
+					<!-- 						<phase>generate-sources</phase> -->
+					<!-- 						<goals> -->
+					<!-- 						</goals> -->
+					<!-- 				   	</execution> -->
 				</executions>
 				<configuration>
 					<sei>course.jaxws.fraction.FractionBean</sei>
@@ -58,8 +59,10 @@
 					<keep>true</keep>
 					<genWsdl>true</genWsdl>
 					<verbose>true</verbose>
-					<resourceDestDir>${project.build.directory}/resources-generated</resourceDestDir>
-					<wsdlDirectory>${project.build.directory}/resources-generated</wsdlDirectory>
+					<resourceDestDir>
+						${project.build.directory}/resources-generated</resourceDestDir>
+					<wsdlDirectory>
+						${project.build.directory}/resources-generated</wsdlDirectory>
 					<sourceDestDir>${project.build.directory}/sources-generated</sourceDestDir>
 					<wsdlLocation>http://localhost:9000/services?wsdl</wsdlLocation>
 					<vmArgs>
@@ -86,12 +89,12 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-ejb-plugin</artifactId>           
+				<artifactId>maven-ejb-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
 					<ejbVersion>3.1</ejbVersion>
 				</configuration>
-			</plugin>			
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -130,7 +133,8 @@
 						</goals>
 						<configuration>
 							<sources>
-								<source>${project.build.directory}/sources-generated</source>
+								<source>
+									${project.build.directory}/sources-generated</source>
 							</sources>
 						</configuration>
 					</execution>
@@ -183,12 +187,12 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<skipTests>true</skipTests>
-		<ignoreFailures>false</ignoreFailures>			
+		<ignoreFailures>false</ignoreFailures>
 	</properties>
-	
+
 </project>

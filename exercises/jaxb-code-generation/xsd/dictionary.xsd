@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
+<xs:schema
 	xmlns:tns="http://www.dueppe.com/course/dictionary"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.dueppe.com/course/dictionary"
-	elementFormDefault="qualified" 
+	elementFormDefault="qualified"
 	attributeFormDefault="unqualified"
-	version="1.0" 
-	jaxb:version="2.0" 
+	version="1.0"
+	jaxb:version="2.0"
 	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
 	<xs:annotation>
 		<xs:appinfo>
-			<jaxb:globalBindings  localScoping="toplevel" />
+			<jaxb:globalBindings localScoping="toplevel" />
 			<jaxb:schemaBindings>
 				<jaxb:package name="course.freedb.domain" />
 			</jaxb:schemaBindings>
 		</xs:appinfo>
 	</xs:annotation>
-	<xs:element name="dictionary" type="tns:DictionaryType"/>
+	<xs:element name="dictionary" type="tns:DictionaryType" />
 	<xs:complexType name="DictionaryType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -26,7 +26,8 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="album" type="tns:AlbumType" minOccurs="0"	maxOccurs="unbounded">
+			<xs:element name="album" type="tns:AlbumType" minOccurs="0"
+				maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<jaxb:property name="albums" generateIsSetMethod="true"></jaxb:property>

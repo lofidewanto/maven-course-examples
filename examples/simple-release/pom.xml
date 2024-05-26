@@ -1,54 +1,57 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>maven.course</groupId>
-  <artifactId>simple-release</artifactId>
-  <version>2.0.1-SNAPSHOT</version>
-  <name>simple-release</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>maven.course</groupId>
+	<artifactId>simple-release</artifactId>
+	<version>2.0.1-SNAPSHOT</version>
+	<name>simple-release</name>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>     
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-  <scm>
-    <connection>scm:git:https://github.com/idueppe/maven-course-examples.git</connection>
-    <developerConnection>scm:git:https://github.com/idueppe/maven-course-examples.git</developerConnection>
-    <url>https://github.com/idueppe/maven-course-examples/</url>
-    <tag>HEAD</tag>
-  </scm>
+	<scm>
+		<connection>scm:git:https://github.com/idueppe/maven-course-examples.git</connection>
+		<developerConnection>
+			scm:git:https://github.com/idueppe/maven-course-examples.git</developerConnection>
+		<url>https://github.com/idueppe/maven-course-examples/</url>
+		<tag>HEAD</tag>
+	</scm>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  
-  <build>
-  	<plugins>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-release-plugin</artifactId>
-  			<version>2.3.2</version>
-  			<configuration>
-  				<commitByProject>true</commitByProject>
-  				<arguments>-N</arguments>
-  				<pomFileName>examples/simple-release/pom.xml</pomFileName>
-  			</configuration>
-  		</plugin>
-  	</plugins>
-  </build>
-  
-  <distributionManagement>
-  	<repository>
-  		<id>nexus-releases</id>
-  		<name>Nexus-Repository</name>
-  		<url>http://localhost:8081/nexus/content/repositories/releases</url>
-  	</repository>
-  	<snapshotRepository>
-  		<id>nexus-snapshots</id>
-  		<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-  	</snapshotRepository>
-  </distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<commitByProject>true</commitByProject>
+					<arguments>-N</arguments>
+					<pomFileName>examples/simple-release/pom.xml</pomFileName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus-Repository</name>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>

@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.course.solutions</groupId>
@@ -31,7 +32,9 @@
 						<manifest>
 							<mainClass>${main.class}</mainClass>
 							<addClasspath>true</addClasspath>
-							<!-- mvn -DoutputDirectory='${project.build.directory}/lib' dependency:copy-dependencies -->
+							<!-- mvn
+							-DoutputDirectory='${project.build.directory}/lib'
+							dependency:copy-dependencies -->
 							<classpathPrefix>./lib/</classpathPrefix>
 						</manifest>
 					</archive>
@@ -47,10 +50,12 @@
 						<id>bundle</id>
 						<configuration>
 							<filters>
-								<filter>${project.basedir}/src/main/assembly/bundle-filter.properties</filter>
+								<filter>
+									${project.basedir}/src/main/assembly/bundle-filter.properties</filter>
 							</filters>
 							<descriptors>
-								<descriptor>${project.basedir}/src/main/assembly/bundle-assembly.xml</descriptor>
+								<descriptor>
+									${project.basedir}/src/main/assembly/bundle-assembly.xml</descriptor>
 							</descriptors>
 							<finalName>${project.artifactId}-${project.version}</finalName>
 						</configuration>

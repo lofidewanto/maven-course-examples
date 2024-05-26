@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.course</groupId>
@@ -23,10 +24,11 @@
 		<url>https://travis-ci.org/idueppe/maven-course-examples</url>
 	</ciManagement>
 	<scm>
-      <connection>scm:git:https://github.com/idueppe/maven-course-examples.git</connection>
-      <developerConnection>scm:git:https://github.com/idueppe/maven-course-examples.git</developerConnection>
-      <url>https://github.com/idueppe/maven-course-examples</url>
-	  <tag>HEAD</tag>
+		<connection>scm:git:https://github.com/idueppe/maven-course-examples.git</connection>
+		<developerConnection>
+			scm:git:https://github.com/idueppe/maven-course-examples.git</developerConnection>
+		<url>https://github.com/idueppe/maven-course-examples</url>
+		<tag>HEAD</tag>
 	</scm>
 	<developers>
 		<developer>
@@ -36,12 +38,12 @@
 				<role>Developer</role>
 			</roles>
 			<email>tfr@users.sourceforge.net</email>
-      		<url>http://javainabox.blogspot.de/</url>
+			<url>http://javainabox.blogspot.de/</url>
 		</developer>
 	</developers>
 	<prerequisites>
-      <maven>3.0.5</maven>
-    </prerequisites>
+		<maven>3.0.5</maven>
+	</prerequisites>
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -60,9 +62,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.18.1</version>
 					<configuration>
-						<!-- 'methods' for parallel is not the fastest way to test, but it 
+						<!-- 'methods' for parallel is not the fastest way to
+						test, but it 
 							is the best, to detect non-threadsafe code. <parallel>methods</parallel> 
-							<forkMode>perthread</forkMode> <threadCount>2</threadCount> <perCoreThreadCount>true</perCoreThreadCount> -->
+							<forkMode>perthread</forkMode> <threadCount>2</threadCount>
+						<perCoreThreadCount>true</perCoreThreadCount> -->
 						<excludes>
 							<exclude>**/*PerformanceTest.java</exclude>
 							<exclude>**/*IntegrationTest.java</exclude>
@@ -98,13 +102,15 @@
 					<groupId>org.mortbay.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
 					<version>8.1.16.v20140903</version>
-					<!-- http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin -->
+					<!--
+					http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin -->
 					<configuration>
 						<scanIntervalSeconds>10</scanIntervalSeconds>
 						<stopKey>foo</stopKey>
 						<stopPort>9999</stopPort>
 						<connectors>
-							<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<connector
+								implementation="org.mortbay.jetty.nio.SelectChannelConnector">
 								<port>8080</port>
 								<maxIdleTime>60000</maxIdleTime>
 							</connector>
@@ -173,20 +179,20 @@
 									</requireJavaVersion>
 								</rules>
 							</configuration>
-					   </execution>
-                       <execution>
-			              <id>enforce-maven</id>
-			              <goals>
-			                <goal>enforce</goal>
-			              </goals>
-			              <configuration>
-			                <rules>
-			                  <requireMavenVersion>
-			                    <version>[3.0.5,)</version>
-			                  </requireMavenVersion>
-			                </rules>    
-			              </configuration>
-			            </execution>
+						</execution>
+						<execution>
+							<id>enforce-maven</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+							<configuration>
+								<rules>
+									<requireMavenVersion>
+										<version>[3.0.5,)</version>
+									</requireMavenVersion>
+								</rules>
+							</configuration>
+						</execution>
 					</executions>
 				</plugin>
 				<plugin>
@@ -235,42 +241,42 @@
 					<version>3.4</version>
 				</plugin>
 				<plugin>
-		          <groupId>org.jacoco</groupId>
-		          <artifactId>jacoco-maven-plugin</artifactId>
-		          <version>0.7.2.201409121644</version>
-		        </plugin>
-		        <plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>versions-maven-plugin</artifactId>
-                  <version>2.1</version>
-                </plugin>
-		        <plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>appassembler-maven-plugin</artifactId>
-                  <version>1.9</version>
-                </plugin>
-		        <plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>exec-maven-plugin</artifactId>
-                  <version>1.3.2</version>
-                </plugin>
-		        <plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>buildnumber-maven-plugin</artifactId>
-                  <version>1.3</version>
-                </plugin>
-                <plugin>
-		          <groupId>org.owasp</groupId>
-		          <artifactId>dependency-check-maven</artifactId>
-		          <version>1.2.10</version>
-		          <executions>
-		              <execution>
-		                  <goals>
-		                      <goal>check</goal>
-		                  </goals>
-		              </execution>
-		          </executions>
-		      	</plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.7.2.201409121644</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>appassembler-maven-plugin</artifactId>
+					<version>1.9</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.3.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>1.3</version>
+				</plugin>
+				<plugin>
+					<groupId>org.owasp</groupId>
+					<artifactId>dependency-check-maven</artifactId>
+					<version>1.2.10</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -292,12 +298,12 @@
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
-		        <artifactId>jacoco-maven-plugin</artifactId>
+				<artifactId>jacoco-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-            </plugin>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencyManagement>
@@ -358,10 +364,10 @@
 				<version>2.13</version>
 			</plugin>
 			<plugin>
-		        <groupId>org.jacoco</groupId>
-		        <artifactId>jacoco-maven-plugin</artifactId>
-		        <version>0.7.2.201409121644</version>
-		    </plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.2.201409121644</version>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
@@ -383,16 +389,17 @@
 				<version>2.1</version>
 			</plugin>
 			<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>2.1</version>
-            </plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
 		</plugins>
 	</reporting>
 	<distributionManagement>
 		<site>
 			<id>localhost</id>
-			<url>file://${user.home}/Sites/${project.groupId}/${project.artifactId}/${project.version}</url>
+			<url>
+				file://${user.home}/Sites/${project.groupId}/${project.artifactId}/${project.version}</url>
 		</site>
 		<downloadUrl>
 			http://${repo.host}:${repo.port}/nexus/content/groups/public/${project.groupId}/${project.artifactId}/${project.version}
@@ -400,12 +407,14 @@
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus Snapshot Repository</name>
-			<url>http://${repo.host}:${repo.port}/nexus/content/repositories/snapshots</url>
+			<url>
+				http://${repo.host}:${repo.port}/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
-			<url>http://${repo.host}:${repo.port}/nexus/content/repositories/releases</url>
+			<url>
+				http://${repo.host}:${repo.port}/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 	<profiles>
