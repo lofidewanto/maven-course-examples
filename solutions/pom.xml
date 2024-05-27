@@ -10,7 +10,7 @@
 	<name>solutions-lab</name>
 	<description>Solutions Labs workspace</description>
 	<modules>
-		<module>jaxws-code-generation</module>
+		<!-- <module>jaxws-code-generation</module> -->
 		<module>mvn.02.solution</module>
 		<module>mvn.03.solution-assembly</module>
 		<module>mvn.03.solution-migration</module>

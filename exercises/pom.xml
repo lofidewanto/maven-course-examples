@@ -12,7 +12,7 @@
 	<modules>
 		<!-- Noch kein Maven Project -->
 		<!-- <module>jaxb-code-generation</module> -->
-		<module>jaxws-code-generation</module>
+		<!-- <module>jaxws-code-generation</module> -->
 		<!-- <module>jaxws-fraction-build-cylce</module> -->
 		<module>jpa-filtering-exercise</module>
 		<!-- <module>mvn.03.exercise-weather</module> -->
