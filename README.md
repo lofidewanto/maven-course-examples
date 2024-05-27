@@ -6,6 +6,8 @@ All projects are intended to be used for training purposes only.
 Maven: 3.9.6
 Java: 11
 
+Some code generation like JAXB doesn't work anymore with Java 11 and need to be reworked!
+
 License
 =======
 Maven Course Examples by 
