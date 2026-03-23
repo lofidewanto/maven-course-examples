@@ -3,10 +3,10 @@ Maven Course Examples (maven-course-examples)
 Examples, Exercises and Solutions for training seminar about [Apache Maven] (http://maven.apache.org/).
 All projects are intended to be used for training purposes only.
 
-Maven: 3.9.6
-Java: 11
+Maven: 3.9.14
+Java: 21
 
-Some code generation like JAXB doesn't work anymore with Java 11 and need to be reworked!
+Some code generation like JAXB doesn't work anymore with Java 11+ and need to be reworked! These modules are disabled in the default build.
 
 License
 =======
